@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 53.65 42.79">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #dedede;
+        stroke: #dedede;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-miterlimit: 10;
+        stroke-width: 1.04px;
+      }
+
+      .cls-2 {
+        fill: #e00;
+        stroke: #e00;
+      }
+    </style>
+  </defs>
+  <g id="Menu">
+    <g>
+      <polygon class="cls-1" points="17.23 41.52 32.72 1.26 36.5 1.26 20.95 41.52 17.23 41.52"/>
+      <g>
+        <polygon class="cls-2" points="1.07 22.22 16.43 30.13 16.43 26.8 5 21.06 16.43 15.33 16.43 11.99 1.07 19.91 1.07 22.22"/>
+        <polygon class="cls-2" points="37.22 11.99 37.22 15.33 48.74 21.06 37.22 26.8 37.22 30.13 52.58 22.25 52.58 19.87 37.22 11.99"/>
+      </g>
+    </g>
+  </g>
+</svg>

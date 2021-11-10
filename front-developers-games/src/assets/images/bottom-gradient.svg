@@ -1,0 +1,14 @@
+<svg id="Fondo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1922.17 357.09">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Degradado_sin_nombre_11);
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_11" data-name="Degradado sin nombre 11" x1="961.08" y1="0.3" x2="961.08" y2="356.79" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#dedede"/>
+    </linearGradient>
+  </defs>
+  <rect class="cls-1" x="-0.43" y="0.3" width="1923.02" height="356.48"/>
+</svg>

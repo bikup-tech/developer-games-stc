@@ -1,0 +1,37 @@
+@import '../../../assets/styles/mixins.scss';
+@import '../../../assets/styles/globalStyles.scss';
+@import '../../../assets/styles/styleConstants.scss';
+
+.workShop-card{
+    @include flex($flex-direction:column);
+    margin-bottom: $m-18;
+}
+
+.challenge__subtitle--workshop {
+    color: $lighterBlue;
+    font-size: $text-20;
+}
+
+.challenge__author {
+    color: $semiBlue;
+    margin-top: $m-2;
+}
+
+.challenge__date {
+    color: $darkBlue;
+    font-weight: bold;
+    margin-top: $m-2;
+
+}
+
+.challenge__regiter-button{
+    width: 100px;
+    margin: $m-8 0px;
+}
+
+.challenge__separator{
+    margin-top: $m-8;
+    background: $darkBlue;
+    height: 1px;
+    width: 100vw;
+}

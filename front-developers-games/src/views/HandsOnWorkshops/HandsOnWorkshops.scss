@@ -1,0 +1,13 @@
+@import '../../assets/styles/mixins.scss';
+@import '../../assets/styles/globalStyles.scss';
+@import '../../assets/styles/styleConstants.scss';
+
+.workshop-container {
+    @include flex($flex-direction:column);
+}
+
+.workshop__subtitle {
+    color: $darkBlue;
+    text-align: center;
+    margin-bottom: $m-18;
+}

@@ -1,0 +1,65 @@
+@import '../../assets/styles/globalStyles.scss';
+@import '../../assets/styles/mixins.scss';
+@import '../../assets/styles/styleConstants.scss';
+
+.countdown__text-container {
+    @include flex($flex-direction: column);
+    margin-bottom: $m-32;
+}
+
+.countdown__text {
+    font-weight: $text-bold;
+    text-align: center;
+    margin-bottom: $m-6;
+}
+
+.countdown__text--blue {
+    color: $darkBlue;
+}
+.countdown__text--red {
+    color: $red;
+}
+
+.countdown-container {
+    @include flex($justify-content: space-between);
+    width: 100%;
+    margin-bottom: $m-42;
+    @media only screen and (min-width: $query-1280) {
+        max-width: 720px;
+    }
+}
+
+.countdown-field-container {
+    @include flex( $flex-direction: column);
+   
+}
+
+.countdown-field__number {
+    @include flex();
+    width: 80px;
+    height: 80px;
+    padding: $p-16;
+    border: 2px solid $lighterBlue;
+    border-radius: $border-radius;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $lightBlue;
+    margin-bottom: $m-6;
+
+    @media screen and (max-width: 320px) {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    @media only screen and (min-width: $query-1280) {
+        width: 160px;
+        height: 160px;
+        font-size: 6rem;
+    }
+}
+
+.countdown-field__name {
+    color: $darkBlue;
+    font-weight: $text-semibold;
+}

@@ -1,0 +1,245 @@
+@import "../../assets/styles/globalStyles.scss";
+@import "../../assets/styles/mixins.scss";
+@import "../../assets/styles/styleConstants.scss";
+
+.challenge-detail {
+  @include flex($flex-direction: column);
+}
+
+.challenge__name {
+  color: $darkBlue;
+  text-align: center;
+  margin-bottom: $m-8;
+}
+
+.challenge__info-group {
+  @include flex($flex-direction: column);
+  margin-bottom: $m-24;
+}
+
+.challenge__info-group--leftalign {
+  @include flex($flex-direction: column);
+  margin-bottom: $m-18;
+
+  @media only screen and (min-width: $query-1280) {
+    align-items: flex-start;
+  }
+}
+
+.info-group__title {
+  color: $red;
+  font-weight: bold;
+  margin-bottom: $m-4;
+}
+
+.info-group__description {
+  color: $darkBlue;
+  text-align: center;
+  max-width: 1024px;
+  font-size: $text-14;
+}
+
+.info-group__description--leftalign {
+  @media only screen and (min-width: $query-1280) {
+    text-align: left;
+  }
+}
+
+.info-group__description--underlined {
+  text-decoration: underline;
+}
+
+.challenge__video {
+  @include flex();
+  width: 100%;
+  height: 320px;
+  background: $semiBlue;
+  margin: $m-18 0;
+  position: relative;
+  z-index: 1;
+  @media only screen and (min-width: $query-1280) {
+    width: calc(100vw - 15px);
+  }
+}
+
+.video__player {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.challenge__video iframe {
+  width: 100%;
+  height: 100%;
+
+  @media only screen and(min-width:$query-1280) {
+    width: 800px;
+  }
+}
+
+.video__background {
+  position: absolute;
+  height: 100%;
+  left: -9999px;
+  right: -9999px;
+  z-index: -1;
+  background: $semiBlue;
+}
+
+.challenge__specific-info {
+  @include flex($flex-direction: column);
+  width: 100%;
+  margin-top: $m-12;
+  margin-bottom: $m-32;
+
+  @media only screen and(min-width:$query-1280) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 800px;
+  }
+}
+
+.specific-info__column {
+  @include flex($flex-direction: column);
+  width: 100%;
+  @media only screen and(min-width:$query-1280) {
+    width: 49%;
+    align-items: flex-start;
+  }
+}
+
+.specific-info__column--spaced {
+  padding-left: $p-24;
+}
+
+.specific-info__separator {
+  height: 100%;
+  width: 2px;
+  border-radius: 999px;
+  background: $lighterBlue;
+}
+
+.challenge__duration {
+  @include flex($flex-direction: column);
+  margin-bottom: $m-8;
+
+  @media only screen and(min-width:$query-1280) {
+    align-items: flex-start;
+  }
+}
+
+.duration__level {
+  @include flex($flex-direction: column);
+  margin-bottom: $m-16;
+
+  @media only screen and(min-width:$query-1280) {
+    align-items: flex-start;
+  }
+}
+
+.level__title {
+  color: $darkBlue;
+  font-weight: $text-semibold;
+  margin-bottom: $m-6;
+  width: 100%;
+  text-align: center;
+
+  @media only screen and(min-width:$query-1280) {
+    text-align: left;
+  }
+}
+
+.level__bottom {
+  @include flex();
+}
+
+.bottom__boxes {
+  @include flex();
+  margin-right: $m-6;
+}
+
+.info-group__list {
+  @include flex($flex-direction: column);
+
+  @media only screen and(min-width:$query-1280) {
+    align-items: flex-start;
+    margin-left: $m-42;
+  }
+}
+
+.list__element {
+  color: $darkBlue;
+  font-size: $text-14;
+}
+
+.list__element--bold {
+  font-weight: bold;
+  font-size: $text-14;
+}
+
+.bottom__boxes {
+  @include flex();
+}
+
+.boxes__box {
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: 2px solid $lighterBlue;
+  margin: 0 $m-2;
+}
+
+.boxes__box--full {
+  background: $lighterBlue;
+}
+
+.challenge__actions {
+  @include flex();
+  width: 100%;
+  align-items: flex-start;
+}
+
+.actions__upload-button {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  margin-right: $m-24;
+}
+
+.upload-button__message {
+  color: $semiBlue;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.upload-button__icon {
+  width: 20px;
+  margin-right: $m-8;
+}
+
+.actions__submit-button {
+  width: 100px;
+}
+
+.submit-button__text {
+  font-weight: $text-bold;
+}
+
+#deliverable__input {
+  display: none;
+}
+
+.list-padding-more {
+  padding-left: 32px;
+}
+
+.custom-left-padding {
+  padding-left: $p-16;
+  font-size: $text-14;
+}
+
+.custom-left-padding--more {
+  padding-left: $p-32;
+  font-size: $text-14;
+}

@@ -1,0 +1,61 @@
+@import '../../assets/styles/globalStyles.scss';
+@import '../../assets/styles/mixins.scss';
+@import '../../assets/styles/styleConstants.scss';
+
+.terms {
+    @include flex($flex-direction: column);
+
+    @media only screen and(min-width: $query-1280) {
+        align-items: flex-start;
+    }
+}
+
+.terms__group {
+    @include flex($flex-direction: column);
+
+    @media only screen and(min-width: $query-1280) {
+        align-items: flex-start;
+    }
+}
+
+.terms__subtitle {
+    color: $darkBlue;
+    margin-bottom: $m-6;
+}
+
+.terms__text-title{
+    color: $darkBlue;
+    font-family: $font-text;
+}
+
+.terms__text {
+    text-align: center;
+    margin-bottom: $m-32;
+    font-family: $font-text;
+
+    @media only screen and(min-width: $query-1280) {
+        text-align: left;
+    }
+}
+
+.terms__text--nomargin {
+    margin-bottom: $m-4;
+}
+
+.terms__list {
+    padding-left: $p-42;
+    margin-bottom: $m-32;
+}
+
+.terms__list--nopoint {
+    margin-bottom: $m-32;
+    list-style: none;
+}
+
+.list__item {
+    margin-bottom: $m-2;
+}
+
+.list__item {
+    margin-bottom: $m-4;
+}

@@ -1,0 +1,63 @@
+@import '../../assets/styles/globalStyles.scss';
+@import '../../assets/styles/mixins.scss';
+@import '../../assets/styles/styleConstants.scss';
+
+.add-participant__opacity{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: $gray;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.modal__add-participant {
+    position: fixed;
+    width: 100%;
+    top: 30%;
+}
+
+.add-participant__form{
+    transform: translate3d(0, 0%, 0);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    background: white;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    max-width: 420px;
+    transition: all .4s ease-in-out;
+}
+
+.hide-bottom {
+    transform: translate3d(-0, 300%, 0);
+    transition: all .4s ease;
+}
+
+.form__input--modal {
+    width: 80%;
+    margin-bottom: 12px;
+}
+
+.form__buttons {
+    margin-bottom: 12px;
+    width: 80%;
+    @include flex($flex-direction:column, $justify-content:space-between);
+    @media only screen and (min-width:$query-1280){
+        @include flex($flex-direction:row, $justify-content:space-between);
+    }
+}

@@ -1,0 +1,291 @@
+@import '../../../../assets/styles/mixins.scss';
+@import '../../../../assets/styles/globalStyles.scss';
+@import '../../../../assets/styles/styleConstants.scss';
+
+.team-card {
+    @include flex($flex-direction: column);
+    border: 1px solid $darkBlue;
+    margin-bottom: $m-24;
+    width: 100%;
+    padding: $p-6 $p-12;
+    background-color: white;
+    @media only screen and(min-width: $query-1280){
+        max-width: 1024px;
+    }
+}
+
+.team-card__info {
+    @include flex($justify-content: flex-start);
+    width: 100%;
+    padding: $p-6 0;
+}
+
+.info__avatar {
+    width: 70px;
+    height: 70px;
+    border: 1px solid $semiBlue;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @media only screen and(min-width: $query-1280){
+        width: 90px;
+        height: 90px;
+    }
+}
+
+.avatar__image {
+    width: 100%;
+    height: 100%;
+}
+
+.info__data {
+    @include flex($flex-direction: column, $align-items: flex-start);
+    flex: 1;
+    padding-left: $p-12;
+    width: 100%;
+
+    @media only screen and(min-width: $query-1280){
+        padding-left: $p-24
+    }
+}
+
+.data__title {
+    @include flex($justify-content: space-between);
+    font-size: 18px;
+    padding-bottom: $p-2;
+    border-bottom: 0.5px solid $lighterBlue;
+    margin-bottom: $m-4;
+    width: 100%;
+
+
+    @media only screen and(min-width: $query-1280){
+        font-size: 22px;
+        padding-bottom: $p-6;
+        margin-bottom: $m-8;
+    }
+}
+
+.title__text {
+    color: $darkBlue;
+}
+
+.title__actions {
+    @include flex($justify-content: flex-end);
+    flex: 1;
+
+}
+
+.title__view {
+    width: 25px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.title__delete {
+    width: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin-left: $m-12;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.data__completed {
+    @include flex($flex-direction: column, $align-items: flex-start);
+    width: 100%;
+
+    @media only screen and(min-width: $query-1280){
+        flex-direction: row;
+        justify-content: flex-start;
+        height: 32px;
+    }
+}
+
+.completed__item {
+    @include flex($justify-content: flex-start);
+    width: 100%;
+    font-weight: $text-bold;
+
+    @media only screen and(min-width: $query-1280){
+        font-size: 20px;
+        width: unset;
+        margin-right: $m-12;
+    }
+
+}
+
+.completed__item--success {
+    color: $lightBlue;
+}
+.completed__item--pending {
+    color: $red ;
+}
+
+.completed__text {
+    margin-right: $m-12;
+    @media only screen and(min-width: $query-1280){
+        font-size: 20px;
+        margin-right: $m-6;
+    }
+}
+
+.completed__number {
+    font-size: 22px;
+    @media only screen and(min-width: $query-1280){
+        font-size: 26px;
+    }
+}
+
+.completed__separator{
+    width: 1px;
+    height: 100%;
+    background: $lighterBlue;
+    margin-right: $m-12;
+}
+
+.team-card__extra {
+    border-top: 1px solid $lighterBlue;
+    padding: $p-6 0;
+    width: 100%;
+    max-height: 0px;
+    opacity: 0;
+    transform-origin: top;
+    transition: max-height 0.7s, opacity 0.4s ease-in-out;
+    display: block;
+
+}
+
+.team-card__extra--visible {
+    @include flex($flex-direction: column);
+    max-height: 900px;
+    opacity: 1;
+
+}
+
+.extra__members {
+    @include flex($flex-direction: column);
+    width: 100%;
+    border-bottom: 1px solid $lighterBlue;
+    padding-bottom: $p-12;
+
+    @media only screen and(min-width: $query-1280){
+        align-items: flex-start;
+    }
+}
+
+.members__title {
+    color: $darkBlue;
+    margin: $m-6;
+
+    @media only screen and(min-width: $query-1280){
+        margin: $m-12;
+    }
+}
+
+.members__member-list {
+    @include flex($flex-direction: column, $align-items: flex-start);
+    width: 100%;
+}
+
+.member-list__member {
+    @include flex($justify-content: space-around);
+
+    width: 100%;
+    padding: $p-6 $p-16;
+
+    @media only screen and(min-width: $query-1280){
+        justify-content: flex-start;
+        padding: $p-8 $p-16;
+    }
+}
+
+.member-list__member--challenge {
+    @include flex($justify-content: space-around);
+
+    width: 100%;
+    padding: $p-6 $p-16;
+
+    @media only screen and(min-width: $query-1280){
+        justify-content: space-between;
+        padding: $p-8 $p-16;
+    }
+}
+
+.member__info {
+    @include flex($justify-content: space-around);
+    width: 100%;
+
+    @media only screen and(min-width: $query-1280){
+        width: 85%;
+        justify-content: flex-start
+    }
+}
+
+.member__name {
+    width: 60%;
+    text-align: left;
+    @media only screen and(min-width: $query-1280){
+        width: 30%;
+    } 
+}
+
+.member__email {
+    @media only screen and(min-width: $query-1280){
+        width: 40%;
+    } 
+}
+
+.member__phone {
+    width: 40%;
+
+    @media only screen and(min-width: $query-1280){
+        width: 30%;
+    } 
+}
+
+.member__actions {
+    @include flex($justify-content: flex-end);
+    width: 10%;
+}
+
+.extra__challenges {
+    @include flex($flex-direction: column);
+    width: 100%;
+    margin-top: $m-6;
+
+    @media only screen and(min-width: $query-1280){
+        align-items: flex-start;
+    } 
+}
+
+.completed-challenge__name {
+    color: $darkBlue;
+    text-align: left;
+    font-weight: $text-semibold;
+    font-size: 18px;
+}
+
+.link__img {
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    transition: all 0.3s;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.dark-background {
+    background: lightgray;
+}
+
+.display-none {
+    display: none;
+}

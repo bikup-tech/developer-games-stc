@@ -1,0 +1,27 @@
+@import '../../assets/styles/globalStyles.scss';
+
+.loading-error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 12px 0;
+    @media only screen and(min-width:$query-1280) {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.loading-error__img{
+    height: 30px;
+    margin-bottom: 12px;
+
+    @media only screen and(min-width:$query-1280) {
+        margin-right: 12px;
+        margin-bottom: 0;
+    }
+}
+
+.loading-error__text{
+    color: $lightRed;
+    font-size: $text-24;
+}

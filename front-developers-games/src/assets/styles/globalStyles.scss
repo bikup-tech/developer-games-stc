@@ -1,0 +1,102 @@
+// Classes generals
+@import './styleConstants.scss';
+@import './mixins.scss';
+
+.mobile {
+    display: flex;
+}
+
+.desktop {
+    display: none;
+}
+
+.app__title {
+    color: $darkBlue;
+    font-size: $mobile-subtitle-18;
+    padding:$p-16 0px $p-12 0px;
+    text-align: center;
+    @media only screen and (min-width:$query-1280) {
+        padding: $p-24 0px;
+        font-size: $desktop-subtitle-20;
+    }
+}
+
+.mb-12--mobile{
+    margin-bottom: $m-12;
+    @media only screen and(min-width: $query-1280){
+        margin-bottom: unset;
+    }
+}
+
+.mb-12{
+    margin-bottom: $m-12;
+}
+
+
+// form styles
+.form__warningMessage {
+    color: $red;
+    text-align: center;
+    padding: $p-12;
+    height: 50px;
+}
+
+.form__button {
+    padding-top: $m-12;
+    min-width: 120px;
+}
+
+.form__input {
+    // tasa de conversión 21
+    width: 100%;
+    height: 24px;
+    @media only screen and (min-width:$query-1280) {
+        height:  35px;
+    }
+}
+
+// profile styles
+.view-profile {
+    position: relative;
+    @include flex($flex-direction: column);
+    width: 100%;
+    max-width: 1024px;
+}
+
+.view-profile__top {
+    @include flex($justify-content: space-between, $align-items: flex-end);
+
+    width: 80%;
+    margin-bottom: $m-12;
+    padding: $p-2;
+
+    @media only screen and(min-width: $query-1280){
+        width: 100%;
+     }
+}
+
+.top__text {
+    font-weight: $text-bold;
+    color: $darkBlue
+}
+
+.profile-button-container {
+    width: auto;
+    min-width: 135px;
+}
+
+
+.normal__font-size {
+    font-size: $text-16;
+}
+
+@media only screen and (min-width:$query-1280) {
+    .mobile {
+        display: none;
+    }
+    
+    .desktop {
+        display: flex;
+    }
+}
+

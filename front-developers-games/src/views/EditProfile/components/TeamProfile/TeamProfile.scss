@@ -1,0 +1,167 @@
+@import '../../../../assets/styles/globalStyles.scss';
+@import '../../../../assets/styles/mixins.scss';
+@import '../../../../assets/styles/styleConstants.scss';
+
+.team-profile__login-info {
+    @include flex($flex-direction: column);
+
+    border: 1px solid $semiBlue;
+    padding: $p-12;
+    width: 80%;
+    background: white;
+
+    @media only screen and(min-width: $query-1280){
+        flex-direction: row;
+        padding: $p-24;
+        width: 100%;
+
+    }
+}
+
+.login-info__avatar {
+    width: 70px;
+    height: 70px;
+    border: 1px solid $semiBlue;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: $m-12;
+    position: relative;
+    @media only screen and(min-width: $query-1280){
+        width: 100px;
+        height: 100px;
+        margin-bottom: 0;
+
+    }
+}
+
+.avatar__image  {
+    width: 100%;
+    height: 100%;
+}
+
+.avatar__photo-container {
+    @include flex();
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25px;
+    background: $semiBlue;
+    z-index: 1;
+   
+
+    @media only screen and(min-width: $query-1280){
+        height: 35px;
+    }
+
+}
+
+.photo-container__img {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+    cursor: pointer;
+    transition: all 0.5s;
+    
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    @media only screen and(min-width: $query-1280){
+        width: 24px;
+        height: 24px;   
+    }
+}
+
+.login-separator {
+    width: 100%;
+    height: 1px;
+    background: $lighterBlue;
+    margin-bottom: $m-12;
+
+    @media only screen and(min-width: $query-1280){
+        height: 100%;
+        width: 1px;
+        margin: 0 $m-8;
+
+    }
+}
+
+.login-info__data {
+    @include flex($flex-direction: column);
+    width: 100%;
+
+    @media only screen and(min-width: $query-1280){
+        width: 85%;
+    }
+}
+
+.profile-input-container {
+    margin-bottom: $m-12;
+    width: 100%;
+}
+
+.profile-input-container--small {
+    @media only screen and(min-width: $query-1280){
+        width: 48%;
+    }
+}
+
+.profile-input__label {
+    font-weight: bold;
+    color: gray;
+    padding-left: $p-4;
+}
+
+.data__password {
+    width: 100%;
+
+    @media only screen and(min-width: $query-1280){
+        @include flex($justify-content: space-between);
+
+    }
+}
+
+.team-profile__members {
+    @include flex($flex-direction:column);
+    width: 100%;
+}
+
+.top__actions {
+    @include flex($flex-direction: column);
+
+    @media only screen and(min-width: $query-1280){
+        flex-direction: row;
+    }
+
+}
+
+.profile-button-container--margin {
+    margin-bottom: $m-6;
+
+    @media only screen and(min-width: $query-1280){
+        margin-right: $m-24 ;
+        margin-bottom: 0;
+
+    }
+}
+
+.team-profile__actions {
+    @include flex($flex-direction: column);
+    width: 100%;
+
+    @media only screen and(min-width: $query-1280){
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+
+.actions__add-participant {
+    width: 190px;
+}
+
+.add-participant__icon {
+    height: 20px;
+    margin-right: $m-6;
+}

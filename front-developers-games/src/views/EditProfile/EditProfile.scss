@@ -1,0 +1,22 @@
+@import '../../assets/styles/mixins.scss';
+@import '../../assets/styles/globalStyles.scss';
+@import '../../assets/styles/styleConstants.scss';
+
+.button-actions-profile__container {
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: $query-1280) {
+        flex-direction: row;
+    }
+}
+
+.profile-button-container--logout {
+    margin-bottom: $m-12;
+
+    @media only screen and (min-width: $query-1280) {
+        margin-bottom: 0;
+        margin-right: $m-12;
+    }
+}
+

@@ -1,0 +1,80 @@
+@import '../../assets/styles/globalStyles.scss';
+
+.alert-background {
+    background-color: $semiBlue;
+    position: fixed;
+    top: 65px;
+    right: $p-12;
+    z-index: 10;
+    transition: all 0.3s ease-in;
+    border-radius: $border-radius;
+}
+
+.alert-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: $p-12;
+    border-radius: $border-radius;
+}
+
+.alert-container--success{
+    background-color: $semiBlue
+}
+.alert-container--error{
+    background-color: $lightRed;
+}
+.alert-container--warning{
+    background-color: $gray;
+}
+
+.alert__icon {
+    height: 30px;
+    width: 30px;
+    margin-right: 16px;
+    filter: invert(0.9);
+}
+
+.alert__message {
+    text-align: left;
+    margin-right: 16px;
+    line-height: 1.3;
+    color: whitesmoke;
+}   
+
+.alert__close {
+    font-weight: bolder;
+    font-size: 18px;
+    justify-self: flex-end;
+    color: whitesmoke;
+
+    &:hover{
+        color: black;
+        cursor: pointer;
+    }
+}
+
+.alert--hidden{
+    transform: translate3d(0, -200px, 0)
+}
+
+.alert--shown{
+    transform: translate3d(0, 0, 0)
+}
+
+
+@media only screen and (min-width: 1280px){ 
+    .alert-background {
+        left: unset;
+        right: $p-32;
+        width: 25%;
+    }
+
+    .alert--hidden{
+        transform: translate3d(700px, 0, 0)
+    }
+    
+    .alert--shown{
+        transform: translate3d(0, 0, 0)
+    }
+}

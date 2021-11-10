@@ -1,0 +1,14 @@
+@import '../../../../assets/styles/globalStyles.scss';
+@import '../../../../assets/styles/mixins.scss';
+@import '../../../../assets/styles/styleConstants.scss';
+
+.flex-column {
+    @include flex($flex-direction: row);
+}
+
+.mt-12--mobile{
+    margin-top: 12px;
+    @media only screen and (min-width:$query-1280) {
+        margin-top: unset;
+    }
+}

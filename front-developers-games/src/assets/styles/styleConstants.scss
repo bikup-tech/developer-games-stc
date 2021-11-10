@@ -1,0 +1,83 @@
+// colors
+$lighterBlue: #3EC4C6;
+$lightBlue: #00ADAF;
+$semiBlue: #008A8C;
+$darkBlue: #006869;
+$red: #FF0000;
+$lightRed: #b94242;
+$gray: #9C9C9C;
+
+$lighterBlue-transparent: rgba(62, 196, 198, 0.05);
+$blue-completed: #99DDDD;
+
+// font-family (los de debajo van a ir en función de éste)
+$font-main: 'redhat-display';
+$font-text: 'redhat-text';
+
+$text-normal: normal;
+$text-semibold: 550;
+$text-bold: bold;
+$text-bolder: 900;
+
+// font weight
+
+// line height
+
+// letter spacing
+
+// font sizes
+$text-14: 14px;
+$text-16: 16px;
+$text-20: 20px;
+$text-22: 22px;
+$text-24: 24px;
+$text-32: 32px;
+$text-38: 38px;
+$text-42: 42px;
+$error-text-12:12px;
+
+$mobile-subtitle-18: 18px;
+$mobile-title-20: 20px;
+
+$desktop-subtitle-20: 20px;
+$desktop-title-22: 22px;
+
+// padding
+$p-2: 2px;
+$p-4: 4px;
+$p-6: 6px;
+$p-8: 8px;
+$p-12: 12px;
+$p-16: 16px;
+$p-24: 24px;
+$p-32: 32px;
+$p-42: 42px;
+$p-48: 48px;
+$p-64: 64px;
+
+// margin
+$m-1: 1px;
+$m-2: 2px;
+$m-4: 4px;
+$m-6: 6px;
+$m-8: 8px;
+$m-12: 12px;
+$m-16: 16px;
+$m-18: 18px;
+$m-24: 24px;
+$m-32: 32px;
+$m-42: 42px;
+$m-48: 48px;
+$m-64: 64px;
+
+// border radius
+$border-radius: 6px;
+
+// Media queries
+$query-1280: 1280px;
+
+// Max-width
+$desktop-max-width: 1280px;
+
+// box shadow
+$box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);

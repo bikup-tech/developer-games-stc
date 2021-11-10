@@ -1,0 +1,77 @@
+@import '../../../../assets/styles/globalStyles.scss';
+@import '../../../../assets/styles/mixins.scss';
+@import '../../../../assets/styles/styleConstants.scss';
+@import '../TeamProfile/TeamProfile.scss';
+@import '../../../Register/Register.scss';
+
+
+.info__avatar-file {
+    display: none;
+}
+
+.button-children__image {
+    height: 20px;
+    margin-right: $m-6;
+}
+
+.team-profile__login-info--admin {
+    @include flex($flex-direction: column);
+
+    border: 1px solid $semiBlue;
+    padding: $p-12;
+    width: 80%;
+
+    @media only screen and(min-width: $query-1280){
+        padding: $p-24;
+        width: 100%;
+
+    }
+}
+
+.login-info__general{
+    @include flex($flex-direction: column);
+    width: 80%;
+    @media only screen and(min-width: $query-1280){
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+.profile {
+    @media only screen and(min-width: $query-1280){
+        padding-top: $p-16;
+        margin-bottom: unset !important;
+    }
+}
+
+.last-entry {
+    margin-bottom: unset !important;
+}
+
+.view-profile__bottom {
+    @include flex($flex-direction: column);
+    width: 80%;
+    margin-bottom: $m-16;
+    margin-top: $m-16;
+    padding: $p-2;
+
+    @media only screen and(min-width: $query-1280){
+        width: 100%;
+        @include flex($justify-content: space-between);
+     }
+}
+
+.button-children__text{
+    text-decoration: none;
+}
+
+.bottom__secondary--buttons {
+    @include flex($flex-direction:column, $align-items:center);
+
+    @media only screen and(min-width: $query-1280){
+        align-items: flex-start
+     }
+}
+
+

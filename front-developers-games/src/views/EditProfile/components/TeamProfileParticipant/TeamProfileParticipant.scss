@@ -1,0 +1,103 @@
+@import "../../../../assets/styles/globalStyles.scss";
+@import "../../../../assets/styles/mixins.scss";
+@import "../../../../assets/styles/styleConstants.scss";
+
+.register__participant-border {
+  border: 1px solid $semiBlue;
+  margin: $m-12;
+  padding: $p-12;
+  max-width: 1024px;
+  width: 80%;
+
+  background: white;
+  @media only screen and (min-width: $query-1280) {
+    width: 100%;
+    align-items: flex-start;
+  }
+}
+
+.participant__title-container {
+  @include flex($justify-content: space-between);
+  width: 100%;
+  margin-bottom: $m-4;
+}
+
+.app__title--noPadding {
+  padding: $p-6 !important;
+}
+
+.title__delete-participant {
+  @include flex($justify-content: flex-end);
+  flex: 1;
+  padding-bottom: $p-6;
+  padding-right: $p-4;
+}
+
+.delete-participant__icon {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+}
+
+.participant__inputs {
+  width: 100%;
+}
+
+.inputs__entries {
+  width: 100%;
+  @media only screen and (min-width: $query-1280) {
+    @include flex();
+    margin-bottom: $m-16;
+  }
+}
+
+.entries__name {
+  width: 100%;
+  height: 24px;
+  margin-bottom: $m-16;
+  @media only screen and (min-width: $query-1280) {
+    width: 40%;
+    height: 35px;
+    margin-bottom: unset;
+    padding-right: $p-8;
+  }
+}
+
+.entries__surname {
+  width: 100%;
+  height: 24px;
+  margin-bottom: $m-16;
+  @media only screen and (min-width: $query-1280) {
+    width: 60%;
+    margin-bottom: unset;
+    height: 35px;
+  }
+}
+
+.entries__mail {
+  width: 100%;
+  height: 24px;
+  margin-bottom: $m-16;
+  @media only screen and (min-width: $query-1280) {
+    width: 65%;
+    height: 35px;
+    margin-bottom: unset;
+    padding-right: $p-8;
+  }
+}
+
+.entries__number {
+  width: 100%;
+  height: 24px;
+  margin-bottom: $m-12;
+  @media only screen and (min-width: $query-1280) {
+    width: 35%;
+    margin-bottom: unset;
+    height: 35px;
+  }
+}

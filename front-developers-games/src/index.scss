@@ -1,0 +1,63 @@
+@import './assets/styles/globalStyles.scss';
+@import './assets/styles/mixins.scss';
+@import './assets/styles/styleConstants.scss';
+
+@font-face{
+  font-family: 'redhat-text';
+  src: url('./assets/fonts/RedHatText-Regular.otf');
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: 'redhat-display';
+  src: url('./assets/fonts/RedHatDisplay-Regular.otf');
+  font-weight: 400;
+}
+@font-face{
+  font-family: 'redhat-display';
+  src: url('./assets/fonts/RedHatDisplay-Medium.otf');
+  font-weight: 550;
+}
+@font-face{
+  font-family: 'redhat-display';
+  src: url('./assets/fonts/RedHatDisplay-Bold.otf');
+  font-weight: 700;
+}
+@font-face{
+  font-family: 'redhat-display';
+  src: url('./assets/fonts/RedHatDisplay-Black.otf');
+  font-weight: 900;
+}
+
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'redhat-text','Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-main;
+  -webkit-print-color-adjust: exact;
+}
+
+#root {
+  height: 100%;
+}

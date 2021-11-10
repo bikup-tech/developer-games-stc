@@ -1,0 +1,41 @@
+@import '../../assets/styles/mixins.scss';
+@import '../../assets/styles/styleConstants.scss';
+
+.main-button {
+    @include flex();
+    border-radius: $border-radius;
+    padding: $p-4 $p-8;
+    background-color: $red;
+    color: white;
+    border: none;
+    transition: all 0.2s ease;
+    width: 100%;
+    font-family: $font-main;
+    font-weight: $text-semibold;
+    font-size: $text-14;
+    &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+}
+
+.main-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-button--big {
+    padding: $p-8 $p-12;
+    font-size: $text-16;
+    font-weight: $text-bold;
+}
+
+.main-button--blue {
+    background-color: $lightBlue;
+}
+
+.main-button--secondary {
+    background-color: white;
+    color: $darkBlue;
+    border: 1px solid $lightBlue;
+}

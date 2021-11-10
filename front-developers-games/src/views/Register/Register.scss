@@ -1,0 +1,51 @@
+@import '../../assets/styles/globalStyles.scss';
+@import '../../assets/styles/mixins.scss';
+@import '../../assets/styles/styleConstants.scss';
+
+.register-container {
+   @include flex($flex-direction: column);
+}
+
+.register__form {
+    @include flex($flex-direction: column);
+    width:80%;
+}
+
+.form__entry-photo{
+    @include flex();
+    cursor: pointer;
+    padding: $p-16 0px;
+}
+
+.entry-photo__image {
+    height: 20px;
+    @media only screen and (min-width:$query-1280) {
+    height: 30px;
+    }
+}
+
+.entry-photo__text {
+    font-size: $text-16;
+    margin-left: $m-8;
+    &:hover {
+        color: $darkBlue;
+    }
+    &:focus {
+        color: $darkBlue;
+    }
+}
+
+.button-children{
+    @include flex();
+    cursor: pointer;
+    text-decoration: unset;
+}
+
+.form__info {
+    color: $lighterBlue;
+}
+
+.form__checkbox {
+    text-align: center;
+}
+

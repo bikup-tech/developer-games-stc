@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.79 41.46">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #9dd;
+      }
+
+      .cls-3 {
+        fill: #dedede;
+      }
+    </style>
+  </defs>
+  <g id="Menu">
+    <g>
+      <g>
+        <g>
+          <g>
+            <rect class="cls-1" x="2.07" y="1.86" width="38.65" height="37.73"/>
+            <path class="cls-2" d="M42,40.89H.77V.57H42ZM3.36,38.3H39.43V3.16H3.36Z"/>
+          </g>
+          <rect class="cls-2" x="2.07" y="1.86" width="38.65" height="8.11"/>
+        </g>
+        <g>
+          <circle class="cls-1" cx="33.41" cy="5.92" r="1.08"/>
+          <path class="cls-1" d="M24.62,7H6.26a1.08,1.08,0,0,1,0-2.16H24.62a1.08,1.08,0,0,1,0,2.16Z"/>
+          <circle class="cls-1" cx="36.64" cy="5.92" r="1.08"/>
+        </g>
+      </g>
+      <g>
+        <rect class="cls-3" x="14.6" y="13.6" width="21.93" height="21.5" transform="translate(51.13 48.69) rotate(180)"/>
+        <rect class="cls-3" x="6.25" y="13.6" width="5.44" height="7.75"/>
+        <rect class="cls-3" x="6.25" y="23.28" width="5.44" height="11.81"/>
+      </g>
+    </g>
+  </g>
+</svg>
