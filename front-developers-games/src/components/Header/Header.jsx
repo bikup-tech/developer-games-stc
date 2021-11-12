@@ -1,23 +1,21 @@
-/* eslint-disable no-nested-ternary */
-import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { NavLink, useHistory } from 'react-router-dom';
-
 import './Header.scss';
 
-// Constants
-import userRoles from '../../constants/userRoles';
+import { NavLink, useHistory } from 'react-router-dom';
+/* eslint-disable no-nested-ternary */
+import React, { useEffect, useState } from 'react';
 
+import closeMenuIcon from '../../assets/images/close-icon.svg';
 // utils
 import getGcloudBucketFileUrl from '../../utils/getGcloudBucketFileUrl';
-
 // Assets
 import headerLogos from '../../assets/images/header-logos.svg';
 import openMenuIcon from '../../assets/images/menu-icon.svg';
-import closeMenuIcon from '../../assets/images/close-icon.svg';
+import { useSelector } from 'react-redux';
+// Constants
+import userRoles from '../../constants/userRoles';
 
 const unloggedNavigation = [
-  { name: 'Register', route: '/santander' },
+  { name: 'Register', route: '/stc' },
   { name: 'Prizes', route: '/prizes' },
   { name: 'Terms & conditions', route: '/terms' },
   { name: 'Login', route: '/login' },
@@ -36,7 +34,7 @@ function Header() {
   const { isHeaderVisible } = useSelector(({ mainReducer }) => mainReducer);
 
   const participantNavigation = [
-    { name: 'Challenges', route: '/santander/challenges' },
+    { name: 'Challenges', route: '/stc/challenges' },
     { name: 'Prizes', route: '/prizes' },
     { name: 'Participant Guide', route: '/participantsGuide' },
     { name: 'Request your welcome kit', route: '/' },
@@ -44,13 +42,13 @@ function Header() {
     { name: userName, route: '/profile' },
   ];
   const adminNavigation = [
-    { name: 'See teams', route: '/santander/teams' },
-    { name: 'Challenges', route: '/santander/challenges' },
+    { name: 'See teams', route: '/stc/teams' },
+    { name: 'Challenges', route: '/stc/challenges' },
     { name: userName, route: '/profile' },
   ];
   const mentorNavigation = [
-    { name: 'See teams', route: '/santander/teams' },
-    { name: 'Challenges', route: '/santander/challenges' },
+    { name: 'See teams', route: '/stc/teams' },
+    { name: 'Challenges', route: '/stc/challenges' },
     { name: userName, route: '/profile' },
   ];
 
@@ -130,11 +128,11 @@ function Header() {
       {isHeaderVisible && (
         <header className="header">
           <div className="header__menu">
-            <NavLink to="/santander" className="menu__logo">
+            <NavLink to="/stc" className="menu__logo">
               <img
                 className="logo__image"
                 src={headerLogos}
-                alt="Developers games Redhat and Santander logos"
+                alt="Developers games Redhat and stc logos"
               />
             </NavLink>
             <img

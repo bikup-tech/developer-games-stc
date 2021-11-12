@@ -1,18 +1,17 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { NavLink, Link } from 'react-router-dom';
-import Countdown from 'react-countdown';
-
 import './TournamentCountdown.scss';
 
-// Assets
-import kitIcon from '../../assets/images/kit-icon.svg';
-import teamIcon from '../../assets/images/team-icon.svg';
-import guidesIcon from '../../assets/images/guides-icon.svg';
+import { Link, NavLink } from 'react-router-dom';
 
 // Components
 import AppWrapper from '../../components/AppWrapper/AppWrapper';
+import Countdown from 'react-countdown';
 import MainButton from '../../components/MainButton/MainButton';
+import React from 'react';
+import guidesIcon from '../../assets/images/guides-icon.svg';
+// Assets
+import kitIcon from '../../assets/images/kit-icon.svg';
+import teamIcon from '../../assets/images/team-icon.svg';
+import { useSelector } from 'react-redux';
 
 function TournamentCountdown({ date }) {
   const { userLogged } = useSelector(({ authReducer }) => authReducer.user);
@@ -71,7 +70,7 @@ function TournamentCountdown({ date }) {
     <>
       <AppWrapper title={`Hi ${userLogged?.name}`}>
         <div className="countdown__text-container">
-          <p className="countdown__text countdown__text--blue">Red Hat and Santander Developer Games will start on</p>
+          <p className="countdown__text countdown__text--blue">Red Hat and stc Developer Games will start on</p>
           <p className="countdown__text countdown__text--red">September 27th at 08:00 AM CEST.</p>
         </div>
         <Countdown date={date || defaultDate} renderer={renderer} />

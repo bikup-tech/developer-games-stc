@@ -1,9 +1,8 @@
-import React from 'react';
-
 import './TermsAndConditions.scss';
 
 // Components
 import AppWrapper from '../../components/AppWrapper/AppWrapper';
+import React from 'react';
 
 function TermsAndConditions() {
   return (
@@ -11,7 +10,7 @@ function TermsAndConditions() {
       <div className="terms">
         <h3 className="terms__subtitle">Terms & Conditions</h3>
         <p className="terms__text">
-          Rules for participation in the Santander & Red Hat Developer Games
+          Rules for participation in the stc & Red Hat Developer Games
           2021, which will take place from September 01 to October 10, 2021
           (including registration time frame, workshops and actual games). If
           you have questions or need additional information, please email to
@@ -31,19 +30,19 @@ function TermsAndConditions() {
 
         <div className="terms__group">
           <h3 className="terms__subtitle">Who organizes it?</h3>
-          <p className="terms__text">Red Hat & Banco Santander</p>
+          <p className="terms__text">Red Hat & Banco stc</p>
         </div>
         <div className="terms__group">
           <h3 className="terms__subtitle">Who can participate?</h3>
           <p className="terms__text">
-            Only can participate Banco Santander employees.
+            Only can participate Banco stc employees.
             Participation is voluntary, and subject to approval from your manager.
           </p>
           <p className="terms__text">
             Participation is part of your employment, and as such you are
             expected to act in a responsible and appropriate manner, complying
             with regulations and personal and professional ethics expected by
-            Banco Santander.
+            Banco stc.
           </p>
         </div>
         <div className="terms__group">
@@ -81,11 +80,11 @@ function TermsAndConditions() {
               {' '}
               <br />
               <a
-                href="https://www.developergames.io/santander"
+                href="https://www.developergames.io/stc"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://www.developergames.io/santander
+                https://www.developergames.io/stc
               </a>
             </li>
             <li className="list__item">
@@ -114,7 +113,7 @@ function TermsAndConditions() {
           <p className="terms__text">
             The competition starts on the 27th of september and ends the 10th of
             October. It is an online competition, though rooms at Red Hat or
-            Banco Santander offices may be available on request. During the 2
+            Banco stc offices may be available on request. During the 2
             weeks of the competition, participants will be able to work at any
             time, in line with their job responsibilities and permissions from
             their manager.
@@ -151,8 +150,8 @@ function TermsAndConditions() {
             not sufficiently conform to the evaluation criteria, prizes may be void.
           </p>
           <p className="terms__text">
-            Prizes were already delivered to Santander España as the distribution
-            relies on the internal guidelines of Santander.
+            Prizes were already delivered to stc España as the distribution
+            relies on the internal guidelines of stc.
           </p>
         </div>
         <div className="terms__group">
@@ -161,7 +160,7 @@ function TermsAndConditions() {
             The judges on behalf of Red Hat will be: Mentors in each challenge
           </p>
           <p className="terms__text">
-            The judges on behalf of Banco Santander will be: Openshift Santander
+            The judges on behalf of Banco stc will be: Openshift stc
             Team members
           </p>
           <p className="terms__text">
@@ -265,7 +264,7 @@ function TermsAndConditions() {
           <h3 className="terms__subtitle">Confidentiality</h3>
           <p className="terms__text">
             The platform on which participants will be developing is owned by
-            Red Hat and Banco Santander and therefore may contain confidential
+            Red Hat and Banco stc and therefore may contain confidential
             information and / or documentation. Participants must consider the
             confidentiality of these materials as per other materials that
             belong to the bank and to which access is given in order to carry
@@ -277,8 +276,8 @@ function TermsAndConditions() {
           <p className="terms__text">
             Both during the course of the competition and at the subsequent
             awards ceremony, participants will be expected to appear in videos
-            and photographs, which may be published in Banco Santander media
-            channels. Banco Santander will save these images in accordance with
+            and photographs, which may be published in Banco stc media
+            channels. Banco stc will save these images in accordance with
             current privacy and security regulations.
           </p>
           <p className="terms__text">
@@ -286,12 +285,12 @@ function TermsAndConditions() {
             cancellation and opposition by sending an email to Benjamin
             Granados:
             {' '}
-            <a href="mailto: benjamin.granados@gruposantander.com?Subject=Contacto%20desde%20página%20términos%20y%20condiciones%20developerGames">
-              benjamin.granados@gruposantander.com
+            <a href="mailto: benjamin.granados@grupostc.com?Subject=Contacto%20desde%20página%20términos%20y%20condiciones%20developerGames">
+              benjamin.granados@grupostc.com
             </a>
           </p>
           <p className="terms__text">
-            The participants also assign to Banco Santander the image rights
+            The participants also assign to Banco stc the image rights
             that may derive from the photographs, videos and their dissemination
             by any means, including for advertising or promotional purposes,
             without having the right to any remuneration derived from their

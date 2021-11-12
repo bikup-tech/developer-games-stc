@@ -3,13 +3,13 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-// constant
-import userRoles from '../../constants/userRoles';
 //  components
 import Challenges from './components/Challenges/Challenges';
-import TournamentCountdown from '../TournamentCountdown/TournamentCountdown';
 import FinishedTournament from '../FinishedTournament/FinishedTournament';
+import TournamentCountdown from '../TournamentCountdown/TournamentCountdown';
 import { loadTournament } from '../../redux/actions/tournamentActions';
+// constant
+import userRoles from '../../constants/userRoles';
 
 function ChallengesPageContainer() {
   const dispatch = useDispatch();
@@ -40,14 +40,14 @@ function ChallengesPageContainer() {
 
       } */}
 
-      {
+      {/* {
         tournament && (
           userLogged.role < userRoles.MENTOR ? (
             tournament?.isActive ? (<Challenges />) : (<FinishedTournament />)
           ) : (<Challenges />)
         )
-      }
-
+      } */}
+      <Challenges />
     </>
   );
 }

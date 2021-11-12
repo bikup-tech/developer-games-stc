@@ -1,37 +1,34 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-
 import './AdminProfile.scss';
 
-// constants
-import warningMessages from '../../../../constants/warningMessages';
-import userRoles from '../../../../constants/userRoles';
-
-// Images
-import cameraIcon from '../../../../assets/images/camera-icon.svg';
-import viewIcon from '../../../../assets/images/view-icon.svg';
-import plusIcon from '../../../../assets/images/plus-icon.svg';
-
+import React, { useEffect, useRef, useState } from 'react';
 // Action Creators
 import {
+  getMentors,
   updateAdminProfile,
   uploadAvatar,
-  getMentors,
 } from '../../../../redux/actions/profileActions';
 import {
   loadTournament,
   setTournamentIsActive,
 } from '../../../../redux/actions/tournamentActions';
-// Utils
-import getGcloudBucketFileUrl from '../../../../utils/getGcloudBucketFileUrl';
+import { useDispatch, useSelector } from 'react-redux';
 
+import CreateParticipantModal from '../../../../components/CreateParticipantModal/CreateParticipantModal';
 // components
 import Input from '../../../../components/Input/Input';
-import MainButton from '../../../../components/MainButton/MainButton';
-import CreateParticipantModal from '../../../../components/CreateParticipantModal/CreateParticipantModal';
-import TeamProfileParticipant from '../TeamProfileParticipant/TeamProfileParticipant';
+import { Link } from 'react-router-dom';
 import LogoutButton from '../LogoutButton/LogoutButton';
+import MainButton from '../../../../components/MainButton/MainButton';
+import TeamProfileParticipant from '../TeamProfileParticipant/TeamProfileParticipant';
+// Images
+import cameraIcon from '../../../../assets/images/camera-icon.svg';
+// Utils
+import getGcloudBucketFileUrl from '../../../../utils/getGcloudBucketFileUrl';
+import plusIcon from '../../../../assets/images/plus-icon.svg';
+import userRoles from '../../../../constants/userRoles';
+import viewIcon from '../../../../assets/images/view-icon.svg';
+// constants
+import warningMessages from '../../../../constants/warningMessages';
 
 function AdminProfile() {
   const dispatch = useDispatch();
@@ -332,7 +329,7 @@ function AdminProfile() {
             </MainButton>
           </div>
           <div className="profile-button-container mb-12--mobile">
-            <Link to="/santander/teams" className="button-children">
+            <Link to="/stc/teams" className="button-children">
               <MainButton isSecondary>
                 <img
                   className="button-children__image"

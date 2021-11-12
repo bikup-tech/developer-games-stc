@@ -1,21 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-
 import './ChallengeCard.scss';
-
-// utils
-import selectChallengeIcon from '../../../../utils/selectChallengeIcon';
-import renderChallengeNumber from '../../../../utils/renderChallengeNumber';
 
 // Action-Creators
 import {
-  setToLoadChallengeDetail,
   clearChallengeDetail,
+  setToLoadChallengeDetail,
 } from '../../../../redux/actions/mainActions';
 
+import { Link } from 'react-router-dom';
 // Components
 import MainButton from '../../../../components/MainButton/MainButton';
+import React from 'react';
+import renderChallengeNumber from '../../../../utils/renderChallengeNumber';
+// utils
+import selectChallengeIcon from '../../../../utils/selectChallengeIcon';
+import { useDispatch } from 'react-redux';
 
 function ChallengeCard({ challenge }) {
   const dispatch = useDispatch();
@@ -42,7 +40,7 @@ function ChallengeCard({ challenge }) {
           <div className="flex-separator" />
           <div className="challenge__button">
             <MainButton color={challenge.isCompleted ? 'blue' : 'red'} onClick={handleButtonClick}>
-              <Link to={`/santander/challenges/${challenge._id}`}>
+              <Link to={`/stc/challenges/${challenge._id}`}>
                 {
                   challenge.isCompleted
                     ? 'Completed challenge'

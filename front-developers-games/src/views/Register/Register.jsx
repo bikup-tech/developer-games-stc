@@ -1,32 +1,33 @@
-/* eslint-disable no-shadow */
-import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
-
 import './Register.scss';
 
-// Constants
-import warningMessages from '../../constants/warningMessages';
-import userRoles from '../../constants/userRoles';
+/* eslint-disable no-shadow */
+import React, { useEffect, useState } from 'react';
+import {
+  addParticipant,
+  addTeamName,
+  clearisTeamRegistered,
+  isCheckedRegisterTherms,
+  registerTeam,
+  setGeneralEntriesWrongValues,
+  setParticipantWrongValues,
+} from '../../redux/actions/registerActions';
+import { useDispatch, useSelector } from 'react-redux';
 
+import AppWrapper from '../../components/AppWrapper/AppWrapper';
+import Checkbox from '../../components/Checkbox/Checkbox';
+import Input from '../../components/Input/Input';
+import MainButton from '../../components/MainButton/MainButton';
+// Components
+import Participant from './Participant/Participant';
 // utils
 import checkArrayHasRepeatedItems from '../../utils/checkArrayHasRepeatedItems';
 import isValidEmail from '../../utils/isValidEmail';
-
-import {
-  addTeamName, addParticipant, isCheckedRegisterTherms,
-  setGeneralEntriesWrongValues, setParticipantWrongValues, registerTeam, clearisTeamRegistered,
-} from '../../redux/actions/registerActions';
-
 // import CameraIcon from '../../assets/images/camara-icon.svg';
 import plusIcon from '../../assets/images/plus-icon.svg';
-
-// Components
-import Participant from './Participant/Participant';
-import AppWrapper from '../../components/AppWrapper/AppWrapper';
-import Input from '../../components/Input/Input';
-import MainButton from '../../components/MainButton/MainButton';
-import Checkbox from '../../components/Checkbox/Checkbox';
+import { useHistory } from 'react-router-dom';
+import userRoles from '../../constants/userRoles';
+// Constants
+import warningMessages from '../../constants/warningMessages';
 
 function Register() {
   const dispatch = useDispatch();
@@ -68,7 +69,7 @@ function Register() {
       if (user?.userLogged?.role >= userRoles.MENTOR) {
         history.replace('/profile');
       } else {
-        history.replace('/santander/challenges');
+        history.replace('/stc/challenges');
       }
     }
   });

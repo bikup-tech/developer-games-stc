@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
 
+import { useHistory } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 // Constants
 import userRoles from '../../constants/userRoles';
 
@@ -15,7 +15,7 @@ function RedirectComponent() {
       if (user?.userLogged?.role >= userRoles.MENTOR) {
         history.replace('/profile');
       } else {
-        history.replace('/santander/challenges');
+        history.replace('/stc/challenges');
       }
     } else {
       history.replace('/login');

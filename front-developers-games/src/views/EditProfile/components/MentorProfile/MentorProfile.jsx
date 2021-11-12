@@ -1,26 +1,22 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-
 import './MentorProfile.scss';
 
-// constants
-import warningMessages from '../../../../constants/warningMessages';
-
-// Images
-import cameraIcon from '../../../../assets/images/camera-icon.svg';
-import viewIcon from '../../../../assets/images/view-icon.svg';
-
+import React, { useEffect, useRef, useState } from 'react';
 // action-creators
 import { updateAdminProfile, uploadAvatar } from '../../../../redux/actions/profileActions';
-
-// Utils
-import getGcloudBucketFileUrl from '../../../../utils/getGcloudBucketFileUrl';
+import { useDispatch, useSelector } from 'react-redux';
 
 // components
 import Input from '../../../../components/Input/Input';
-import MainButton from '../../../../components/MainButton/MainButton';
+import { Link } from 'react-router-dom';
 import LogoutButton from '../LogoutButton/LogoutButton';
+import MainButton from '../../../../components/MainButton/MainButton';
+// Images
+import cameraIcon from '../../../../assets/images/camera-icon.svg';
+// Utils
+import getGcloudBucketFileUrl from '../../../../utils/getGcloudBucketFileUrl';
+import viewIcon from '../../../../assets/images/view-icon.svg';
+// constants
+import warningMessages from '../../../../constants/warningMessages';
 
 function MentorProfile() {
   const {
@@ -213,7 +209,7 @@ function MentorProfile() {
       <small className="form__warningMessage">{warningMessage}</small>
       <div className="view-profile__bottom">
         <div className="profile-button-container mb-12--mobile">
-          <Link to="/santander/teams" className="button-children">
+          <Link to="/stc/teams" className="button-children">
             <MainButton isSecondary>
               <img className="button-children__image" src={viewIcon} alt="See Developers Games teams" />
               <p className="button-children__text">See teams</p>

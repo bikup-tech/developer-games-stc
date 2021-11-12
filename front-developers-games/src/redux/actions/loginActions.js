@@ -1,13 +1,11 @@
-import axios from 'axios';
-
+import APIConstants from '../../constants/APIConstants';
 // constants
 import actionTypes from './actionTypes';
-import APIConstants from '../../constants/APIConstants';
 import alertConstants from '../../constants/alertConstants';
-
+import axios from 'axios';
+import { loadTournament } from './tournamentActions';
 // actions
 import { setAlert } from './alertActions';
-import { loadTournament } from './tournamentActions';
 
 export function loginSuccess(user) {
   return {
@@ -36,7 +34,7 @@ export function login(email, password) {
       data.teamId && localStorage.setItem('toLoadTeamDetail', data.teamId);
 
       dispatch(loginSuccess(data));
-      dispatch(loadTournament('santander'));
+      dispatch(loadTournament('stc'));
     } catch (logError) {
       dispatch(
         setAlert(

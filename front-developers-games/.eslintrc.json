@@ -1,39 +1,30 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "jest": true
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "plugin:react/recommended",
-        "airbnb"
-    ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 12,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-        "linebreak-style": 0,
-        "global-require": 0,
-        "eslint linebreak-style": [
-            0,
-            "error",
-            "windows"
-        ],
-        "react/prop-types": 0,
-        "no-unused-expressions": 0,
-        "no-underscore-dangle": 0,
-        "jsx-a11y/click-events-have-key-events": 0,
-        "jsx-a11y/no-noninteractive-element-interactions": 0,
-        "jsx-a11y/label-has-associated-control": 0,
-        "jsx-a11y/no-static-element-interactions": 0,
-        "jsx-a11y/media-has-caption": 0
-
-    }
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "linebreak-style": 0,
+    "global-require": 0,
+    "eslint linebreak-style": [0, "error", "windows"],
+    "react/prop-types": 0,
+    "no-unused-expressions": 0,
+    "no-underscore-dangle": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "jsx-a11y/label-has-associated-control": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/media-has-caption": 0,
+    "import/order": 0
+  }
 }
