@@ -34,13 +34,13 @@ debug(`>>> Starting server in -- ${process.env.NODE_ENV.toUpperCase()} -- mode <
 if (process.env.NODE_ENV === 'production') {
   debug('--- Connecting to <PRODUCTION> database ---');
   mongoose.connect(
-    'mongodb+srv://developer-games:developer-games@developer-games-cluster.f0myq.mongodb.net/developer-games?retryWrites=true&w=majority',
+    'mongodb+srv://developer-games-stc:developer-games-stc@cluster0.e6t1p.mongodb.net/developer-games?retryWrites=true&w=majority',
     { useNewUrlParser: true, useUnifiedTopology: true },
   );
 } else {
   debug('--- Connecting to <DEV> database ---');
   mongoose.connect(
-    'mongodb+srv://developer-games:developer-games-dev@developergames-devenv-c.mrnww.mongodb.net/developer-games?retryWrites=true&w=majority',
+    'mongodb+srv://developer-games-stc:developer-games-stc@cluster0.e6t1p.mongodb.net/developer-games?retryWrites=true&w=majority',
     { useNewUrlParser: true, useUnifiedTopology: true },
   );
 }
@@ -64,15 +64,15 @@ app.use('/api/participants', participantsRouter);
 app.use('/api/upload', uploadFilesRouter);
 app.use('/api/tournaments', tournamentsRouter);
 
-// const { encryptPassword } = require('./src/utils/bcryptUtils');
+const { encryptPassword } = require('./src/utils/bcryptUtils');
 // const mailService = require('./src/services/mailService');
 
-// app.get('/api/generatePassword', async (req, res) => {
-//   const password = 'L0SV2I03uh';
-//   const encrypted = await encryptPassword(password);
+app.get('/api/generatePassword', async (req, res) => {
+  const password = 'admin1234';
+  const encrypted = await encryptPassword(password);
 
-//   res.send(encrypted);
-// });
+  res.send(encrypted);
+});
 
 // app.get('/api/sendMailToUser', async (req, res) => {
 //   mailService.sendRegisteredUser('', '');
