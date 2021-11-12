@@ -24,6 +24,7 @@ export function loginError(error) {
 export function login(email, password) {
   return async (dispatch) => {
     try {
+      console.log(APIConstants);
       const body = { email, password };
       const loginEndpoint = `${APIConstants.HOSTNAME}${APIConstants.LOGIN}`;
       const { data } = await axios.post(loginEndpoint, body);
