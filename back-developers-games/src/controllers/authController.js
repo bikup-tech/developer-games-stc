@@ -55,12 +55,12 @@ function authController() {
 
       const findQuery = {
         _id: userId,
-        password,
       };
 
       const foundUser = await participantsModel.findOne(findQuery);
+      const isPasswordCorrect = await comparePasswords(password, foundUser.password);
 
-      if (!foundUser) {
+      if (!foundUser || !isPasswordCorrect) {
         return handleResponseSuccess(res, false);
       }
 
