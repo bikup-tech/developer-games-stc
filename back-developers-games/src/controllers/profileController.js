@@ -12,6 +12,7 @@ const participantService = require('../services/participantService');
 const CustomError = require('../utils/CustomError');
 const handleResponseError = require('../utils/handleResponseError');
 const handleResponseSuccess = require('../utils/handleResponseSuccess');
+const { encryptPassword } = require('../utils/bcryptUtils');
 
 const teamValidProps = {
   name: 'name',
@@ -90,7 +91,8 @@ function profileController() {
       const { newPassword, participantId, ...bodyProps } = body;
 
       if (newPassword) {
-        bodyProps.password = newPassword;
+        const encryptedPassword = await encryptPassword(newPassword);
+        bodyProps.password = encryptedPassword;
       }
       const updatedAdmin = await participantService.updateParticipant(participantId, bodyProps);
 

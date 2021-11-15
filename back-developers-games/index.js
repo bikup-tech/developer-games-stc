@@ -68,7 +68,7 @@ const { encryptPassword } = require('./src/utils/bcryptUtils');
 // const mailService = require('./src/services/mailService');
 
 app.get('/api/generatePassword', async (req, res) => {
-  const password = 'admin1234';
+  const password = 'test1234';
   const encrypted = await encryptPassword(password);
 
   res.send(encrypted);
