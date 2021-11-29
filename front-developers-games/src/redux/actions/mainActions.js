@@ -1,15 +1,10 @@
-import axios from 'axios';
-
+import APIConstants from '../../constants/APIConstants';
 // Constants
 import actionTypes from './actionTypes';
-import APIConstants from '../../constants/APIConstants';
 import alertConstants from '../../constants/alertConstants';
-
+import axios from 'axios';
 // Action-Creators
 import { setAlert } from './alertActions';
-
-// Utils
-import getGcloudBucketFileUrl from '../../utils/getGcloudBucketFileUrl';
 
 export function addParticipant(participant) {
   return {
@@ -274,17 +269,14 @@ export function loadTournamentTeams(tournamentId) {
 export function getCompletedChallengeByChallengeId(tournamentChallengeId) {
   return async (dispatch) => {
     try {
-      const endpoint = `${APIConstants.HOSTNAME}${APIConstants.GET_COMPLETED_CHALLENGES(tournamentChallengeId)}`;
+      const endpoint = `${APIConstants.HOSTNAME}${APIConstants.ZIP_CHALLENGES(tournamentChallengeId)}`;
       const { data } = await axios.get(endpoint);
 
-      if (data.length) {
+      if (data) {
         const aElement = document.createElement('a');
-        data.forEach((challenge) => {
-          aElement.href = getGcloudBucketFileUrl(challenge.gcloudName);
-          aElement.download = challenge.filename;
-          aElement.target = '_blank';
-          aElement.click();
-        });
+        aElement.href = data;
+        aElement.target = '_blank';
+        aElement.click();
       } else {
         dispatch(setAlert(
           alertConstants.types.WARNING,
