@@ -78,7 +78,6 @@ function teamChallengesController(gcBucket) {
         await zip.addFile(filename, downloadedFile[0]);
 
         if (index === completedChallenges.length - 1) {
-          // await zip.writeZip(path.join(__dirname, './downloads/my_file.zip'));
           const gcloudFileName = `c_challenge-${selectedChallenge.challengeNumber}.zip`;
           const fileHandle = gcBucket.file(gcloudFileName);
           const [fileExists] = await fileHandle.exists();
