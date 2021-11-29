@@ -23,5 +23,5 @@ module.exports = {
   MISSING_DELIVERABLE_FILE: 'Please provide a deliverable file.',
   NOT_AN_EMAIL: 'Please provide a valid email.',
   ALREADY_REGISTERED_EMAILS: (emails) => `The emails <${emails.toString().replaceAll(',', ', ')}> are already being used.`,
-
+  NO_COMPLETED_CHALLENGES: 'There is no challenge completed yet.',
 };

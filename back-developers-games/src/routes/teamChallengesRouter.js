@@ -1,20 +1,30 @@
 const { Router } = require('express');
-const teamChallengesController = require('../controllers/teamChallengesController');
+const teamChallengesController = require('../controllers/teamChallengesController')();
 const teamChallengeController = require('../controllers/teamChallengeController');
+const rawGCBucketTeamChallengesController = require('../controllers/teamChallengesController');
 
 const router = Router();
 
-router.route('/')
-  .get(teamChallengesController.getTeamChallenges);
+function teamChallengesRouter(gcBucket) {
+  const gcBucketTeamChallengesController = rawGCBucketTeamChallengesController(gcBucket);
 
-router.route('/adminTemplates/:tournamentId')
-  .get(teamChallengesController.getAdminTemplateChallenges);
+  router.route('/')
+    .get(teamChallengesController.getTeamChallenges);
 
-router.route('/completed/:tournamentChallengeId')
-  .get(teamChallengesController.getCompletedChallengesByChallengeId);
+  router.route('/adminTemplates/:tournamentId')
+    .get(teamChallengesController.getAdminTemplateChallenges);
 
-router.route('/:teamChallengeId')
-  .get(teamChallengeController.getTeamChallengeById)
-  .patch(teamChallengeController.updateTeamChallenge);
+  router.route('/completed/:tournamentChallengeId')
+    .get(teamChallengesController.getCompletedChallengesByChallengeId);
 
-module.exports = router;
+  router.route('/completed/zip/:tournamentChallengeId')
+    .get(gcBucketTeamChallengesController.zipCompletedChallengesByTournamentChallengeId);
+
+  router.route('/:teamChallengeId')
+    .get(teamChallengeController.getTeamChallengeById)
+    .patch(teamChallengeController.updateTeamChallenge);
+
+  return router;
+}
+
+module.exports = teamChallengesRouter;
