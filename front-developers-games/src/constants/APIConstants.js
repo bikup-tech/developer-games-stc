@@ -23,4 +23,5 @@ export default {
   LOAD_TOURNAMENT: (tournamentName) => `/api/tournaments/${tournamentName}`,
   ACTIVATE_TOURNAMENT: (tournamentName) => `/api/tournaments/${tournamentName}/activate`,
   RESTORE_PASSWORD: (userEmail) => `/api/auth/resetPassword/${userEmail}`,
+  ZIP_CHALLENGES: (tournamentChallengeId) => `/api/teamChallenges/completed/zip/${tournamentChallengeId}`,
 };
