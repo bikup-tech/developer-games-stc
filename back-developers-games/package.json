@@ -8,9 +8,6 @@
     "test": "jest --testEnvironment=node --collect-coverage --watchAll",
     "test-debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand"
   },
-  "engines": {
-    "node": "16.13.1"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
