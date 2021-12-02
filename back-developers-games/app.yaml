@@ -1,8 +1,12 @@
-runtime: nodejs
-env: flex
+runtime: nodejs16
+
+instance_class: B1
+
 manual_scaling:
   instances: 1
-resources:
-  cpu: 1
-  memory_gb: 0.5
-  disk_size_gb: 10
+
+handlers:
+- url: /.*
+  secure: always
+  redirect_http_response_code: 301
+  script: auto
