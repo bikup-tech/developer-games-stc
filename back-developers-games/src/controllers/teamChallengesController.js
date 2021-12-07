@@ -3,6 +3,7 @@ const AdmZip = require('adm-zip');
 const { BAD_REQUEST, NOT_FOUND } = require('../constants/statusCodes');
 const { MISSING_QUERY_PROPERTIES, MISSING_PROPERTIES } = require('../constants/responseMessages');
 const teamChallengeService = require('../services/teamChallengeService');
+const logService = require('../services/logService');
 // Utils
 const CustomError = require('../utils/CustomError');
 const handleResponseError = require('../utils/handleResponseError');
@@ -92,6 +93,7 @@ function teamChallengesController(gcBucket) {
         }
       });
     } catch (error) {
+      logService.createLog('zip', error, 'error_zipping');
       return handleResponseError(res, error);
     }
   }
