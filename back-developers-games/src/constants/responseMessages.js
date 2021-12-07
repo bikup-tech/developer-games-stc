@@ -24,4 +24,5 @@ module.exports = {
   NOT_AN_EMAIL: 'Please provide a valid email.',
   ALREADY_REGISTERED_EMAILS: (emails) => `The emails <${emails.toString().replaceAll(',', ', ')}> are already being used.`,
   NO_COMPLETED_CHALLENGES: 'There is no challenge completed yet.',
+  NO_FOUND_GCS_FILE: (filename) => `There is no file in gcloud storage with the name ${filename}`,
 };

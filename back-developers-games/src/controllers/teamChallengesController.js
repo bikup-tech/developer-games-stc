@@ -1,4 +1,3 @@
-const AdmZip = require('adm-zip');
 // const fs = require('fs');
 const { BAD_REQUEST, NOT_FOUND } = require('../constants/statusCodes');
 const { MISSING_QUERY_PROPERTIES, MISSING_PROPERTIES } = require('../constants/responseMessages');
@@ -8,6 +7,7 @@ const logService = require('../services/logService');
 const CustomError = require('../utils/CustomError');
 const handleResponseError = require('../utils/handleResponseError');
 const handleResponseSuccess = require('../utils/handleResponseSuccess');
+const generateZipFromFiles = require('../utils/generateZipFromFiles');
 
 function teamChallengesController(gcBucket) {
   async function getTeamChallenges({ query: { teamId } }, res) {
@@ -70,30 +70,13 @@ function teamChallengesController(gcBucket) {
         return handleResponseSuccess(res, false);
       }
 
-      const zip = new AdmZip();
-      completedChallenges.forEach(async (selectedChallenge, index) => {
-        let { filename } = selectedChallenge;
+      const generatedZipFileName = await generateZipFromFiles(completedChallenges, gcBucket);
 
-        filename = `${selectedChallenge.teamId?.name}-${filename}`;
-        const downloadedFile = await gcBucket.file(selectedChallenge.gcloudName).download();
-        await zip.addFile(filename, downloadedFile[0]);
+      logService.createLog('DOWNLOAD_ZIP', generatedZipFileName, 'SUCCESS');
 
-        if (index === completedChallenges.length - 1) {
-          const gcloudFileName = `c_challenge-${selectedChallenge.challengeNumber}.zip`;
-          const fileHandle = gcBucket.file(gcloudFileName);
-          const [fileExists] = await fileHandle.exists();
-
-          if (fileExists) {
-            await gcBucket.file(gcloudFileName).delete();
-          }
-
-          await fileHandle.save(zip.toBuffer());
-
-          return handleResponseSuccess(res, `https://storage.googleapis.com/developer-games-bucket/${gcloudFileName}`);
-        }
-      });
+      return handleResponseSuccess(res, `https://storage.googleapis.com/developer-games-bucket/${generatedZipFileName}`);
     } catch (error) {
-      logService.createLog('zip', error, 'error_zipping');
+      logService.createLog('DOWNLOAD_ZIP', error, 'error_zipping');
       return handleResponseError(res, error);
     }
   }
